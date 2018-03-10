@@ -1,0 +1,15 @@
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+var Typo = exports.Typo = {
+  toolbarTitle: {
+    fontSize: 18
+  },
+  cardTitle: {
+    fontSize: 16
+  },
+  cardDescription: {
+    fontSize: 14,
+    lineHeight: 20
+  }
+};

@@ -1,0 +1,118 @@
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+var _jsxFileName = '/home/natanael/Documentos/JOB/APPS_REACT/app_med/App.js';
+
+var _react = require('react');
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactNative = require('react-native');
+
+var _reactNavigation = require('react-navigation');
+
+var _FirstScreen = require('./tabs/FirstScreen');
+
+var _FirstScreen2 = _interopRequireDefault(_FirstScreen);
+
+var _SecondScreen = require('./tabs/SecondScreen');
+
+var _SecondScreen2 = _interopRequireDefault(_SecondScreen);
+
+var _ThirdScreen = require('./tabs/ThirdScreen');
+
+var _ThirdScreen2 = _interopRequireDefault(_ThirdScreen);
+
+var _FourthScreen = require('./tabs/FourthScreen');
+
+var _FourthScreen2 = _interopRequireDefault(_FourthScreen);
+
+var _CreateScreen = require('./tabs/CreateScreen');
+
+var _CreateScreen2 = _interopRequireDefault(_CreateScreen);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var _Dimensions$get = _reactNative.Dimensions.get('window'),
+    height = _Dimensions$get.height,
+    width = _Dimensions$get.width;
+
+var MainScreenNavigator = (0, _reactNavigation.TabNavigator)({
+  Tab1: { screen: _FirstScreen2.default },
+  Tab2: { screen: _SecondScreen2.default },
+  Tab3: { screen: _CreateScreen2.default },
+  Tab4: { screen: _FourthScreen2.default },
+  Tab5: { screen: _ThirdScreen2.default }
+}, {
+  tabBarPosition: 'bottom',
+  animationEnabled: false,
+  tabBarOptions: {
+    showIcon: true,
+    showLabel: false,
+    labelStyle: {
+      fontSize: 12
+    },
+    tabStyle: {},
+    style: {
+      backgroundColor: '#f94b4b',
+      height: 50
+    },
+    iconStyle: {
+      padding: 0
+    },
+    indicatorStyle: {
+      backgroundColor: 'transparent'
+    }
+  }
+});
+
+MainScreenNavigator.navigationOptions = {
+  title: "Tab example"
+};
+
+var CustomDrawerContentComponent = function CustomDrawerContentComponent(props) {
+  return _react2.default.createElement(
+    _reactNative.ScrollView,
+    {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 49
+      }
+    },
+    _react2.default.createElement(
+      _reactNative.Text,
+      { style: {
+          alignSelf: 'center',
+          marginTop: 10
+        },
+        onPress: function onPress() {
+          var navigateAction = _reactNavigation.NavigationActions.navigate({
+            routeName: 'Home',
+
+            params: {},
+
+            action: _reactNavigation.NavigationActions.navigate({ routeName: 'Tab3' })
+          });
+
+          props.navigation.dispatch(navigateAction);
+        }, __source: {
+          fileName: _jsxFileName,
+          lineNumber: 50
+        }
+      },
+      'Notifica\xE7\xF5es'
+    )
+  );
+};
+
+var DrawerLeft = (0, _reactNavigation.DrawerNavigator)({
+  Home: { screen: MainScreenNavigator }
+}, {
+  drawerWidth: width - width * 0.1,
+  contentComponent: CustomDrawerContentComponent
+});
+
+DrawerLeft.navigationOptions = {
+  title: 'Timeline' };
+
+exports.default = DrawerLeft;
