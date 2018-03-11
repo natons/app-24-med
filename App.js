@@ -28,7 +28,7 @@ var MainScreenNavigator = TabNavigator({
       tabStyle: {
         },
       style: {
-        backgroundColor: '#f94b4b',
+        backgroundColor: '#008aed',
         height: 50
         },
       iconStyle: {

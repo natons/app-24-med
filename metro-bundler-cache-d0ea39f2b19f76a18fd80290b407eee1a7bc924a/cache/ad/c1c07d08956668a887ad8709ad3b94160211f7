@@ -34,6 +34,10 @@ var _reactNativeSideMenu = require('react-native-side-menu');
 
 var _reactNativeSideMenu2 = _interopRequireDefault(_reactNativeSideMenu);
 
+var _Modal = require('../Modal');
+
+var _Modal2 = _interopRequireDefault(_Modal);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -90,11 +94,11 @@ var FirstScreen = _wrapComponent('FirstScreen')((_temp = _class = function (_Rea
                 { style: {
                         flex: 1,
 
-                        backgroundColor: 'white',
+                        backgroundColor: '#dbddd0',
                         marginTop: _reactNative.Platform.OS == 'ios' ? 0 : 0
                     }, __source: {
                         fileName: _jsxFileName,
-                        lineNumber: 37
+                        lineNumber: 39
                     }
                 },
                 _react3.default.createElement(
@@ -102,19 +106,20 @@ var FirstScreen = _wrapComponent('FirstScreen')((_temp = _class = function (_Rea
                     {
                         __source: {
                             fileName: _jsxFileName,
-                            lineNumber: 47
+                            lineNumber: 49
                         }
                     },
                     _react3.default.createElement(
                         _reactNativeElements.Header,
                         {
                             outerContainerStyles: {
-                                height: 50
+                                height: 50,
+                                borderColor: '#fafafa'
                             },
-                            backgroundColor: '#f94b4b',
-                            statusBarProps: { backgroundColor: 'red' }, __source: {
+                            backgroundColor: '#008aed',
+                            statusBarProps: { backgroundColor: '#009aed' }, __source: {
                                 fileName: _jsxFileName,
-                                lineNumber: 48
+                                lineNumber: 50
                             }
                         },
                         _react3.default.createElement(
@@ -126,13 +131,13 @@ var FirstScreen = _wrapComponent('FirstScreen')((_temp = _class = function (_Rea
                                 },
                                 __source: {
                                     fileName: _jsxFileName,
-                                    lineNumber: 54
+                                    lineNumber: 57
                                 }
                             },
                             _react3.default.createElement(
                                 _reactNative.Text,
                                 { style: {
-                                        color: 'white',
+                                        color: '#fafafa',
                                         fontSize: 18,
                                         marginRight: 2
                                     },
@@ -140,23 +145,23 @@ var FirstScreen = _wrapComponent('FirstScreen')((_temp = _class = function (_Rea
                                         _this2.props.navigation.navigate('DrawerOpen');
                                     }, __source: {
                                         fileName: _jsxFileName,
-                                        lineNumber: 60
+                                        lineNumber: 63
                                     }
                                 },
                                 '24MED'
                             ),
                             _react3.default.createElement(
                                 _reactNativeElements.Badge,
-                                { containerStyle: { backgroundColor: 'black', padding: 4 }, __source: {
+                                { containerStyle: { backgroundColor: '#c41b2c', padding: 4, borderColor: '#fafafa', borderWidth: 0.5 }, __source: {
                                         fileName: _jsxFileName,
-                                        lineNumber: 68
+                                        lineNumber: 71
                                     }
                                 },
                                 _react3.default.createElement(
                                     _reactNative.Text,
-                                    { style: { color: 'white', fontSize: 7, alignSelf: 'center' }, __source: {
+                                    { style: { color: '#fafafa', fontSize: 7, alignSelf: 'center' }, __source: {
                                             fileName: _jsxFileName,
-                                            lineNumber: 69
+                                            lineNumber: 72
                                         }
                                     },
                                     '10'
@@ -166,7 +171,7 @@ var FirstScreen = _wrapComponent('FirstScreen')((_temp = _class = function (_Rea
                         _react3.default.createElement(_reactNative.View, {
                             __source: {
                                 fileName: _jsxFileName,
-                                lineNumber: 72
+                                lineNumber: 75
                             }
                         }),
                         _react3.default.createElement(
@@ -176,20 +181,20 @@ var FirstScreen = _wrapComponent('FirstScreen')((_temp = _class = function (_Rea
                                     alignSelf: 'center'
                                 }, __source: {
                                     fileName: _jsxFileName,
-                                    lineNumber: 73
+                                    lineNumber: 76
                                 }
                             },
                             _react3.default.createElement(_reactNativeElements.Icon, {
                                 name: 'search',
-                                color: 'white',
-                                type: 'font-awesome',
-                                size: 22,
+                                color: '#fafafa',
+                                type: 'material-icons',
+                                size: 24,
                                 iconStyle: {
                                     marginRight: 8
                                 },
                                 __source: {
                                     fileName: _jsxFileName,
-                                    lineNumber: 77
+                                    lineNumber: 80
                                 }
                             }),
                             _react3.default.createElement(
@@ -197,37 +202,37 @@ var FirstScreen = _wrapComponent('FirstScreen')((_temp = _class = function (_Rea
                                 {
                                     style: {
                                         flexDirection: 'row',
-                                        marginRight: 8
+                                        marginRight: 6
                                     }, __source: {
                                         fileName: _jsxFileName,
-                                        lineNumber: 86
+                                        lineNumber: 89
                                     }
                                 },
                                 _react3.default.createElement(_reactNativeElements.Icon, {
-                                    name: 'star-o',
-                                    color: 'white',
-                                    type: 'font-awesome',
+                                    name: 'star',
+                                    color: '#fafafa',
+                                    type: 'material-community',
                                     size: 24,
                                     iconStyle: {
                                         marginRight: 2
                                     },
                                     __source: {
                                         fileName: _jsxFileName,
-                                        lineNumber: 91
+                                        lineNumber: 94
                                     }
                                 }),
                                 _react3.default.createElement(
                                     _reactNativeElements.Badge,
-                                    { containerStyle: { backgroundColor: 'black', padding: 4 }, __source: {
+                                    { containerStyle: { backgroundColor: '#c41b2c', padding: 4, borderColor: '#fafafa', borderWidth: 0.5 }, __source: {
                                             fileName: _jsxFileName,
-                                            lineNumber: 100
+                                            lineNumber: 103
                                         }
                                     },
                                     _react3.default.createElement(
                                         _reactNative.Text,
-                                        { style: { color: 'white', fontSize: 7, alignSelf: 'center' }, __source: {
+                                        { style: { color: '#fafafa', fontSize: 7, alignSelf: 'center' }, __source: {
                                                 fileName: _jsxFileName,
-                                                lineNumber: 101
+                                                lineNumber: 104
                                             }
                                         },
                                         '10'
@@ -235,13 +240,13 @@ var FirstScreen = _wrapComponent('FirstScreen')((_temp = _class = function (_Rea
                                 )
                             ),
                             _react3.default.createElement(_reactNativeElements.Icon, {
-                                name: 'dots-three-vertical',
-                                color: 'white',
-                                type: 'entypo',
+                                name: 'more-vert',
+                                color: '#fafafa',
+                                type: 'material-icons',
                                 size: 24,
                                 __source: {
                                     fileName: _jsxFileName,
-                                    lineNumber: 104
+                                    lineNumber: 107
                                 }
                             })
                         )
@@ -251,10 +256,17 @@ var FirstScreen = _wrapComponent('FirstScreen')((_temp = _class = function (_Rea
                         {
                             containerStyle: {
                                 height: 'auto',
-                                paddingBottom: 0
+                                paddingBottom: 0,
+                                backgroundColor: '#fafafa',
+                                alignSelf: 'flex-start',
+                                borderColor: 'transparent',
+                                marginLeft: 0,
+                                marginRight: 0,
+                                marginTop: 7,
+                                width: _reactNative.Dimensions.get('window').width
                             }, __source: {
                                 fileName: _jsxFileName,
-                                lineNumber: 113
+                                lineNumber: 116
                             }
                         },
                         _react3.default.createElement(
@@ -265,7 +277,7 @@ var FirstScreen = _wrapComponent('FirstScreen')((_temp = _class = function (_Rea
                                     alignSelf: 'center'
                                 }, __source: {
                                     fileName: _jsxFileName,
-                                    lineNumber: 118
+                                    lineNumber: 128
                                 }
                             },
                             'An\xFAncio'
@@ -278,7 +290,7 @@ var FirstScreen = _wrapComponent('FirstScreen')((_temp = _class = function (_Rea
                                     padding: 4
                                 }, __source: {
                                     fileName: _jsxFileName,
-                                    lineNumber: 125
+                                    lineNumber: 135
                                 }
                             },
                             _react3.default.createElement(
@@ -287,7 +299,7 @@ var FirstScreen = _wrapComponent('FirstScreen')((_temp = _class = function (_Rea
                                         flexDirection: 'row'
                                     }, __source: {
                                         fileName: _jsxFileName,
-                                        lineNumber: 130
+                                        lineNumber: 140
                                     }
                                 },
                                 _react3.default.createElement(_reactNativeElements.Avatar, {
@@ -297,7 +309,7 @@ var FirstScreen = _wrapComponent('FirstScreen')((_temp = _class = function (_Rea
                                     activeOpacity: 0.7,
                                     __source: {
                                         fileName: _jsxFileName,
-                                        lineNumber: 133
+                                        lineNumber: 143
                                     }
                                 }),
                                 _react3.default.createElement(
@@ -309,7 +321,7 @@ var FirstScreen = _wrapComponent('FirstScreen')((_temp = _class = function (_Rea
                                             marginLeft: 4
                                         }, __source: {
                                             fileName: _jsxFileName,
-                                            lineNumber: 139
+                                            lineNumber: 149
                                         }
                                     },
                                     'Fulana de Oliveira'
@@ -321,13 +333,13 @@ var FirstScreen = _wrapComponent('FirstScreen')((_temp = _class = function (_Rea
                                         flexDirection: 'row'
                                     }, __source: {
                                         fileName: _jsxFileName,
-                                        lineNumber: 149
+                                        lineNumber: 159
                                     }
                                 },
                                 _react3.default.createElement(_reactNativeElements.Icon, {
-                                    name: 'message-circle',
+                                    name: 'chat',
                                     color: 'black',
-                                    type: 'feather',
+                                    type: 'material-icons',
                                     size: 24,
                                     iconStyle: {
                                         alignSelf: 'flex-end',
@@ -338,25 +350,25 @@ var FirstScreen = _wrapComponent('FirstScreen')((_temp = _class = function (_Rea
                                     },
                                     __source: {
                                         fileName: _jsxFileName,
-                                        lineNumber: 152
+                                        lineNumber: 162
                                     }
                                 }),
                                 _react3.default.createElement(_reactNativeElements.Icon, {
-                                    name: 'dots-three-vertical',
+                                    name: 'more-vert',
                                     color: 'black',
-                                    type: 'entypo',
+                                    type: 'material-icons',
                                     size: 24,
                                     iconStyle: {},
                                     __source: {
                                         fileName: _jsxFileName,
-                                        lineNumber: 163
+                                        lineNumber: 173
                                     }
                                 })
                             )
                         ),
                         _react3.default.createElement(_reactNativeElements.Divider, { style: { backgroundColor: 'black', marginTop: 10 }, __source: {
                                 fileName: _jsxFileName,
-                                lineNumber: 173
+                                lineNumber: 183
                             }
                         }),
                         _react3.default.createElement(
@@ -367,7 +379,7 @@ var FirstScreen = _wrapComponent('FirstScreen')((_temp = _class = function (_Rea
                                     paddingTop: 10
                                 }, __source: {
                                     fileName: _jsxFileName,
-                                    lineNumber: 174
+                                    lineNumber: 184
                                 }
                             },
                             _react3.default.createElement(
@@ -377,7 +389,7 @@ var FirstScreen = _wrapComponent('FirstScreen')((_temp = _class = function (_Rea
                                         justifyContent: 'space-between'
                                     }, __source: {
                                         fileName: _jsxFileName,
-                                        lineNumber: 179
+                                        lineNumber: 189
                                     }
                                 },
                                 _react3.default.createElement(
@@ -387,7 +399,7 @@ var FirstScreen = _wrapComponent('FirstScreen')((_temp = _class = function (_Rea
                                             padding: 4
                                         }, __source: {
                                             fileName: _jsxFileName,
-                                            lineNumber: 183
+                                            lineNumber: 193
                                         }
                                     },
                                     _react3.default.createElement(_reactNativeElements.Icon, {
@@ -401,14 +413,14 @@ var FirstScreen = _wrapComponent('FirstScreen')((_temp = _class = function (_Rea
                                         },
                                         __source: {
                                             fileName: _jsxFileName,
-                                            lineNumber: 187
+                                            lineNumber: 197
                                         }
                                     }),
                                     _react3.default.createElement(
                                         _reactNative.Text,
                                         { style: { marginTop: 4 }, __source: {
                                                 fileName: _jsxFileName,
-                                                lineNumber: 197
+                                                lineNumber: 207
                                             }
                                         },
                                         'Santa Helena'
@@ -421,7 +433,7 @@ var FirstScreen = _wrapComponent('FirstScreen')((_temp = _class = function (_Rea
                                             padding: 4
                                         }, __source: {
                                             fileName: _jsxFileName,
-                                            lineNumber: 199
+                                            lineNumber: 209
                                         }
                                     },
                                     _react3.default.createElement(_reactNativeElements.Icon, {
@@ -435,14 +447,14 @@ var FirstScreen = _wrapComponent('FirstScreen')((_temp = _class = function (_Rea
                                         },
                                         __source: {
                                             fileName: _jsxFileName,
-                                            lineNumber: 203
+                                            lineNumber: 213
                                         }
                                     }),
                                     _react3.default.createElement(
                                         _reactNative.Text,
                                         { style: { marginTop: 4 }, __source: {
                                                 fileName: _jsxFileName,
-                                                lineNumber: 213
+                                                lineNumber: 223
                                             }
                                         },
                                         '26/03/2018'
@@ -455,7 +467,7 @@ var FirstScreen = _wrapComponent('FirstScreen')((_temp = _class = function (_Rea
                                             padding: 4
                                         }, __source: {
                                             fileName: _jsxFileName,
-                                            lineNumber: 215
+                                            lineNumber: 225
                                         }
                                     },
                                     _react3.default.createElement(_reactNativeElements.Icon, {
@@ -469,14 +481,14 @@ var FirstScreen = _wrapComponent('FirstScreen')((_temp = _class = function (_Rea
                                         },
                                         __source: {
                                             fileName: _jsxFileName,
-                                            lineNumber: 219
+                                            lineNumber: 229
                                         }
                                     }),
                                     _react3.default.createElement(
                                         _reactNative.Text,
                                         { style: { marginTop: 4 }, __source: {
                                                 fileName: _jsxFileName,
-                                                lineNumber: 229
+                                                lineNumber: 239
                                             }
                                         },
                                         '00:35 \xE0s 12:00'
@@ -490,7 +502,7 @@ var FirstScreen = _wrapComponent('FirstScreen')((_temp = _class = function (_Rea
                                         justifyContent: 'space-between'
                                     }, __source: {
                                         fileName: _jsxFileName,
-                                        lineNumber: 232
+                                        lineNumber: 242
                                     }
                                 },
                                 _react3.default.createElement(
@@ -500,7 +512,7 @@ var FirstScreen = _wrapComponent('FirstScreen')((_temp = _class = function (_Rea
                                             padding: 4
                                         }, __source: {
                                             fileName: _jsxFileName,
-                                            lineNumber: 236
+                                            lineNumber: 246
                                         }
                                     },
                                     _react3.default.createElement(_reactNativeElements.Icon, {
@@ -514,14 +526,14 @@ var FirstScreen = _wrapComponent('FirstScreen')((_temp = _class = function (_Rea
                                         },
                                         __source: {
                                             fileName: _jsxFileName,
-                                            lineNumber: 240
+                                            lineNumber: 250
                                         }
                                     }),
                                     _react3.default.createElement(
                                         _reactNative.Text,
                                         { style: { marginTop: 4, color: 'green' }, __source: {
                                                 fileName: _jsxFileName,
-                                                lineNumber: 250
+                                                lineNumber: 260
                                             }
                                         },
                                         'Dispon\xEDvel'
@@ -534,7 +546,7 @@ var FirstScreen = _wrapComponent('FirstScreen')((_temp = _class = function (_Rea
                                             padding: 4
                                         }, __source: {
                                             fileName: _jsxFileName,
-                                            lineNumber: 252
+                                            lineNumber: 262
                                         }
                                     },
                                     _react3.default.createElement(_reactNativeElements.Icon, {
@@ -548,14 +560,14 @@ var FirstScreen = _wrapComponent('FirstScreen')((_temp = _class = function (_Rea
                                         },
                                         __source: {
                                             fileName: _jsxFileName,
-                                            lineNumber: 256
+                                            lineNumber: 266
                                         }
                                     }),
                                     _react3.default.createElement(
                                         _reactNative.Text,
                                         { style: { marginTop: 4, color: 'green' }, __source: {
                                                 fileName: _jsxFileName,
-                                                lineNumber: 266
+                                                lineNumber: 276
                                             }
                                         },
                                         'R$ 250,00'
@@ -568,12 +580,12 @@ var FirstScreen = _wrapComponent('FirstScreen')((_temp = _class = function (_Rea
                                             padding: 4
                                         }, __source: {
                                             fileName: _jsxFileName,
-                                            lineNumber: 268
+                                            lineNumber: 278
                                         }
                                     },
                                     _react3.default.createElement(_reactNativeElements.Icon, {
                                         name: 'public',
-                                        color: 'black',
+                                        color: '#008aed',
                                         type: 'material-icons',
                                         size: 24,
                                         iconStyle: {
@@ -582,14 +594,14 @@ var FirstScreen = _wrapComponent('FirstScreen')((_temp = _class = function (_Rea
                                         },
                                         __source: {
                                             fileName: _jsxFileName,
-                                            lineNumber: 272
+                                            lineNumber: 282
                                         }
                                     }),
                                     _react3.default.createElement(
                                         _reactNative.Text,
-                                        { style: { marginTop: 4 }, __source: {
+                                        { style: { marginTop: 4, color: '#008aed' }, __source: {
                                                 fileName: _jsxFileName,
-                                                lineNumber: 282
+                                                lineNumber: 292
                                             }
                                         },
                                         'Todos'
@@ -601,7 +613,7 @@ var FirstScreen = _wrapComponent('FirstScreen')((_temp = _class = function (_Rea
                             _reactNative.Text,
                             { style: { marginBottom: 10, paddingTop: 10 }, __source: {
                                     fileName: _jsxFileName,
-                                    lineNumber: 286
+                                    lineNumber: 296
                                 }
                             },
                             'Uma descri\xE7\xE3o do an\xFAncio, com observa\xE7\xF5es ou pedido.'
@@ -609,6 +621,85 @@ var FirstScreen = _wrapComponent('FirstScreen')((_temp = _class = function (_Rea
                         _react3.default.createElement(
                             _reactNativeMaps2.default,
                             {
+                                customMapStyle: [{
+                                    "featureType": "administrative.land_parcel",
+                                    "elementType": "all",
+                                    "stylers": [{
+                                        "visibility": "off"
+                                    }]
+                                }, {
+                                    "featureType": "landscape.man_made",
+                                    "elementType": "all",
+                                    "stylers": [{
+                                        "visibility": "off"
+                                    }]
+                                }, {
+                                    "featureType": "poi",
+                                    "elementType": "labels",
+                                    "stylers": [{
+                                        "visibility": "off"
+                                    }]
+                                }, {
+                                    "featureType": "road",
+                                    "elementType": "labels",
+                                    "stylers": [{
+                                        "visibility": "simplified"
+                                    }, {
+                                        "lightness": 20
+                                    }]
+                                }, {
+                                    "featureType": "road.highway",
+                                    "elementType": "geometry",
+                                    "stylers": [{
+                                        "hue": "#f49935"
+                                    }]
+                                }, {
+                                    "featureType": "road.highway",
+                                    "elementType": "labels",
+                                    "stylers": [{
+                                        "visibility": "simplified"
+                                    }]
+                                }, {
+                                    "featureType": "road.arterial",
+                                    "elementType": "geometry",
+                                    "stylers": [{
+                                        "hue": "#fad959"
+                                    }]
+                                }, {
+                                    "featureType": "road.arterial",
+                                    "elementType": "labels",
+                                    "stylers": [{
+                                        "visibility": "off"
+                                    }]
+                                }, {
+                                    "featureType": "road.local",
+                                    "elementType": "geometry",
+                                    "stylers": [{
+                                        "visibility": "simplified"
+                                    }]
+                                }, {
+                                    "featureType": "road.local",
+                                    "elementType": "labels",
+                                    "stylers": [{
+                                        "visibility": "simplified"
+                                    }]
+                                }, {
+                                    "featureType": "transit",
+                                    "elementType": "all",
+                                    "stylers": [{
+                                        "visibility": "off"
+                                    }]
+                                }, {
+                                    "featureType": "water",
+                                    "elementType": "all",
+                                    "stylers": [{
+                                        "hue": "#a1cdfc"
+                                    }, {
+                                        "saturation": 30
+                                    }, {
+                                        "lightness": 49
+                                    }]
+                                }],
                                 style: {
                                     padding: 0,
                                     marginLeft: 0,
@@ -621,10 +712,9 @@ var FirstScreen = _wrapComponent('FirstScreen')((_temp = _class = function (_Rea
                                     latitudeDelta: 0.015,
                                     longitudeDelta: 0.0121
                                 },
-                                maxZoomLevel: 20,
-                                minZoomLevel: 18, __source: {
+                                __source: {
                                     fileName: _jsxFileName,
-                                    lineNumber: 289
+                                    lineNumber: 299
                                 }
                             },
                             _react3.default.createElement(
@@ -635,17 +725,17 @@ var FirstScreen = _wrapComponent('FirstScreen')((_temp = _class = function (_Rea
                                         longitude: -122.4324
                                     }, __source: {
                                         fileName: _jsxFileName,
-                                        lineNumber: 304
+                                        lineNumber: 436
                                     }
                                 },
                                 _react3.default.createElement(_reactNativeElements.Icon, {
                                     name: 'hospital-marker',
-                                    color: 'red',
+                                    color: '#c41b2c',
                                     type: 'material-community',
                                     size: 38,
                                     __source: {
                                         fileName: _jsxFileName,
-                                        lineNumber: 309
+                                        lineNumber: 441
                                     }
                                 })
                             )
@@ -659,26 +749,26 @@ var FirstScreen = _wrapComponent('FirstScreen')((_temp = _class = function (_Rea
                                     justifyContent: 'space-between'
                                 }, __source: {
                                     fileName: _jsxFileName,
-                                    lineNumber: 317
+                                    lineNumber: 449
                                 }
                             },
                             _react3.default.createElement(
                                 _reactNative.View,
                                 { style: { flexDirection: 'row' }, __source: {
                                         fileName: _jsxFileName,
-                                        lineNumber: 323
+                                        lineNumber: 455
                                     }
                                 },
                                 _react3.default.createElement(_reactNativeElements.Icon, {
-                                    name: this.state.starClick == false ? 'star-o' : 'star',
-                                    color: 'black',
-                                    type: 'font-awesome',
+                                    name: this.state.starClick == false ? 'star-border' : 'star',
+                                    color: this.state.starClick == false ? 'black' : '#008aed',
+                                    type: 'material-icons',
                                     size: 24,
                                     onPress: this.btnStarClick,
                                     iconStyle: {},
                                     __source: {
                                         fileName: _jsxFileName,
-                                        lineNumber: 324
+                                        lineNumber: 456
                                     }
                                 }),
                                 _react3.default.createElement(
@@ -690,24 +780,18 @@ var FirstScreen = _wrapComponent('FirstScreen')((_temp = _class = function (_Rea
                                         },
                                         __source: {
                                             fileName: _jsxFileName,
-                                            lineNumber: 333
+                                            lineNumber: 465
                                         }
                                     },
                                     String(this.state.interest) + (this.state.interest > 1 ? ' Interessados' : ' Interessado')
                                 )
                             ),
-                            _react3.default.createElement(
-                                _reactNative.Text,
-                                {
-                                    style: {
-                                        alignSelf: 'center'
-                                    }, __source: {
-                                        fileName: _jsxFileName,
-                                        lineNumber: 341
-                                    }
-                                },
-                                'Coment\xE1rios'
-                            )
+                            _react3.default.createElement(_Modal2.default, {
+                                __source: {
+                                    fileName: _jsxFileName,
+                                    lineNumber: 473
+                                }
+                            })
                         )
                     )
                 )
@@ -722,9 +806,9 @@ var FirstScreen = _wrapComponent('FirstScreen')((_temp = _class = function (_Rea
         var tintColor = _ref.tintColor;
         return _react3.default.createElement(_reactNative.Image, {
             source: require('../images/timeline_icon.png'),
-            style: { width: 24, height: 24, tintColor: 'white' }, __source: {
+            style: { width: 24, height: 24, tintColor: '#fafafa' }, __source: {
                 fileName: _jsxFileName,
-                lineNumber: 16
+                lineNumber: 18
             }
         });
     }

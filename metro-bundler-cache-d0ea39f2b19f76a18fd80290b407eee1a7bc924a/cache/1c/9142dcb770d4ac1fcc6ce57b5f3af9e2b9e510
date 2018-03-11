@@ -54,7 +54,7 @@ var MainScreenNavigator = (0, _reactNavigation.TabNavigator)({
     },
     tabStyle: {},
     style: {
-      backgroundColor: '#f94b4b',
+      backgroundColor: '#008aed',
       height: 50
     },
     iconStyle: {

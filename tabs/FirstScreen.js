@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text, View, Image, StatusBar, Platform, ScrollView } from 'react-native';
+import { Text, View, Image, StatusBar, Platform, ScrollView, Dimensions } from 'react-native';
 import { Card, Button, Icon, Header, Divider, Avatar, Badge } from 'react-native-elements';
 
 import Toolbar from '../lib/Toolbar';
@@ -9,13 +9,15 @@ import  MapView, { Marker } from 'react-native-maps';
 
 import SideMenu from 'react-native-side-menu';
 
+import ModalExample from '../Modal';
+
 export default class FirstScreen extends React.Component {
     static navigationOptions = {
         tabBarLabel: 'TimeLine',
         tabBarIcon: ({tintColor}) => (
             <Image
                 source={require('../images/timeline_icon.png')}
-                style={{width: 24, height: 24, tintColor: 'white'}}>
+                style={{width: 24, height: 24, tintColor: '#fafafa'}}>
 
             </Image>
         )
@@ -38,7 +40,7 @@ export default class FirstScreen extends React.Component {
                     {
                         flex: 1,
                         //justifyContent: 'center',
-                        backgroundColor: 'white',
+                        backgroundColor: '#dbddd0',
                         marginTop: (Platform.OS == 'ios') ? 0 : 0
                     }
                     }>
@@ -47,10 +49,11 @@ export default class FirstScreen extends React.Component {
                         <ScrollView>
                             <Header
                                 outerContainerStyles={{
-                                    height: 50
+                                    height: 50,
+                                    borderColor: '#fafafa'
                                 }}
-                                backgroundColor="#f94b4b"
-                                statusBarProps={{ backgroundColor: 'red' }}>
+                                backgroundColor="#008aed"
+                                statusBarProps={{ backgroundColor: '#009aed' }}>
                                 <View
                                     style={{
                                         flexDirection: 'row',
@@ -58,15 +61,15 @@ export default class FirstScreen extends React.Component {
                                     }}
                                     >
                                     <Text style={{
-                                        color: 'white',
+                                        color: '#fafafa',
                                         fontSize: 18,
                                         marginRight: 2
                                         }}
                                         onPress={()=>{this.props.navigation.navigate('DrawerOpen')}}>
                                         24MED
                                     </Text>
-                                    <Badge containerStyle={{ backgroundColor: 'black', padding: 4}}>
-                                        <Text style={{color: 'white', fontSize: 7, alignSelf: 'center'}}>10</Text>
+                                    <Badge containerStyle={{ backgroundColor: '#c41b2c', padding: 4, borderColor: '#fafafa', borderWidth: 0.5}}>
+                                        <Text style={{color: '#fafafa', fontSize: 7, alignSelf: 'center'}}>10</Text>
                                     </Badge>
                                 </View>
                                 <View />
@@ -76,9 +79,9 @@ export default class FirstScreen extends React.Component {
                                 }}>
                                     <Icon 
                                         name='search'
-                                        color='white'
-                                        type='font-awesome'
-                                        size={22}
+                                        color='#fafafa'
+                                        type='material-icons'
+                                        size={24}
                                         iconStyle={{
                                             marginRight: 8
                                         }}
@@ -86,25 +89,25 @@ export default class FirstScreen extends React.Component {
                                     <View
                                         style={{
                                             flexDirection: 'row',
-                                            marginRight: 8
+                                            marginRight: 6
                                         }}>
                                         <Icon 
-                                            name='star-o'
-                                            color='white'
-                                            type='font-awesome'
+                                            name='star'
+                                            color='#fafafa'
+                                            type='material-community'
                                             size={24}
                                             iconStyle={{
                                                 marginRight: 2
                                             }}
                                         />
-                                        <Badge containerStyle={{ backgroundColor: 'black', padding: 4}}>
-                                            <Text style={{color: 'white', fontSize: 7, alignSelf: 'center'}}>10</Text>
+                                        <Badge containerStyle={{ backgroundColor: '#c41b2c', padding: 4, borderColor: '#fafafa', borderWidth: 0.5}}>
+                                            <Text style={{color: '#fafafa', fontSize: 7, alignSelf: 'center'}}>10</Text>
                                         </Badge>
                                     </View>
                                     <Icon 
-                                        name='dots-three-vertical'
-                                        color='white'
-                                        type='entypo'
+                                        name='more-vert'
+                                        color='#fafafa'
+                                        type='material-icons'
                                         size={24}
                                     />
                                     
@@ -113,7 +116,14 @@ export default class FirstScreen extends React.Component {
                             <Card
                                 containerStyle={{
                                     height: 'auto',
-                                    paddingBottom: 0
+                                    paddingBottom: 0,
+                                    backgroundColor: '#fafafa',
+                                    alignSelf: 'flex-start',
+                                    borderColor: 'transparent',
+                                    marginLeft: 0,
+                                    marginRight: 0,
+                                    marginTop: 7,
+                                    width: Dimensions.get('window').width
                                     }}>
                                 <Text style={{
                                     fontSize: 18,
@@ -150,9 +160,9 @@ export default class FirstScreen extends React.Component {
                                         flexDirection: 'row'
                                         }}>
                                         <Icon 
-                                            name='message-circle'
+                                            name='chat'
                                             color='black'
-                                            type='feather'
+                                            type='material-icons'
                                             size={24}
                                             iconStyle={{
                                                 alignSelf: 'flex-end',
@@ -161,9 +171,9 @@ export default class FirstScreen extends React.Component {
                                             onPress={() => this.props.navigation.navigate('Tab4')}
                                         />
                                         <Icon 
-                                            name='dots-three-vertical'
+                                            name='more-vert'
                                             color='black'
-                                            type='entypo'
+                                            type='material-icons'
                                             size={24}
                                             iconStyle={{
                                             }}
@@ -271,7 +281,7 @@ export default class FirstScreen extends React.Component {
                                             }}>
                                             <Icon 
                                                 name='public'
-                                                color='black'
+                                                color='#008aed'
                                                 type='material-icons'
                                                 size={24}
                                                 iconStyle={{
@@ -279,7 +289,7 @@ export default class FirstScreen extends React.Component {
                                                     paddingRight: 6
                                                     }}
                                                 />
-                                            <Text style={{marginTop:4}}>Todos</Text>
+                                            <Text style={{marginTop:4, color: '#008aed'}}>Todos</Text>
                                         </View>
                                     </View>
                                 </View>
@@ -287,6 +297,127 @@ export default class FirstScreen extends React.Component {
                                     Uma descrição do anúncio, com observações ou pedido.
                                 </Text>
                                 <MapView
+                                    customMapStyle={
+                                        [
+                                            {
+                                                "featureType": "administrative.land_parcel",
+                                                "elementType": "all",
+                                                "stylers": [
+                                                    {
+                                                        "visibility": "off"
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "featureType": "landscape.man_made",
+                                                "elementType": "all",
+                                                "stylers": [
+                                                    {
+                                                        "visibility": "off"
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "featureType": "poi",
+                                                "elementType": "labels",
+                                                "stylers": [
+                                                    {
+                                                        "visibility": "off"
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "featureType": "road",
+                                                "elementType": "labels",
+                                                "stylers": [
+                                                    {
+                                                        "visibility": "simplified"
+                                                    },
+                                                    {
+                                                        "lightness": 20
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "featureType": "road.highway",
+                                                "elementType": "geometry",
+                                                "stylers": [
+                                                    {
+                                                        "hue": "#f49935"
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "featureType": "road.highway",
+                                                "elementType": "labels",
+                                                "stylers": [
+                                                    {
+                                                        "visibility": "simplified"
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "featureType": "road.arterial",
+                                                "elementType": "geometry",
+                                                "stylers": [
+                                                    {
+                                                        "hue": "#fad959"
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "featureType": "road.arterial",
+                                                "elementType": "labels",
+                                                "stylers": [
+                                                    {
+                                                        "visibility": "off"
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "featureType": "road.local",
+                                                "elementType": "geometry",
+                                                "stylers": [
+                                                    {
+                                                        "visibility": "simplified"
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "featureType": "road.local",
+                                                "elementType": "labels",
+                                                "stylers": [
+                                                    {
+                                                        "visibility": "simplified"
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "featureType": "transit",
+                                                "elementType": "all",
+                                                "stylers": [
+                                                    {
+                                                        "visibility": "off"
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "featureType": "water",
+                                                "elementType": "all",
+                                                "stylers": [
+                                                    {
+                                                        "hue": "#a1cdfc"
+                                                    },
+                                                    {
+                                                        "saturation": 30
+                                                    },
+                                                    {
+                                                        "lightness": 49
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
                                     style={{
                                         padding: 0,
                                         marginLeft: 0,
@@ -299,8 +430,9 @@ export default class FirstScreen extends React.Component {
                                         latitudeDelta: 0.015,
                                         longitudeDelta: 0.0121,
                                     }}
-                                    maxZoomLevel={20}
-                                    minZoomLevel={18}>
+                                    //maxZoomLevel={20}
+                                    //minZoomLevel={17}
+                                    >
                                     <Marker
                                         coordinate={{
                                             latitude: 37.78825,
@@ -308,7 +440,7 @@ export default class FirstScreen extends React.Component {
                                         }}>
                                         <Icon 
                                             name='hospital-marker'
-                                            color='red'
+                                            color='#c41b2c'
                                             type='material-community'
                                             size={38}
                                         />
@@ -322,9 +454,9 @@ export default class FirstScreen extends React.Component {
                                     }}>
                                     <View style={{flexDirection: 'row'}}>
                                         <Icon 
-                                            name={this.state.starClick == false ? 'star-o' : 'star'}
-                                            color='black'
-                                            type='font-awesome'
+                                            name={this.state.starClick == false ? 'star-border' : 'star'}
+                                            color={this.state.starClick == false ? 'black' : '#008aed'}
+                                            type='material-icons'
                                             size={24}
                                             onPress={this.btnStarClick}
                                             iconStyle={{
@@ -338,12 +470,7 @@ export default class FirstScreen extends React.Component {
                                             >{String(this.state.interest) + (this.state.interest > 1 ? ' Interessados': ' Interessado')}
                                         </Text>
                                     </View>
-                                    <Text
-                                        style={{
-                                            alignSelf: 'center'
-                                        }}>
-                                        Comentários
-                                    </Text>
+                                    <ModalExample/>
                                 </View>
                             </Card>
                         </ScrollView>
